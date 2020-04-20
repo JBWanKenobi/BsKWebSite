@@ -176,6 +176,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProductManagerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -340,6 +341,10 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Views\ProductManager\Index.cshtml" />
+    <Content Include="Views\ProductManager\Create.cshtml" />
+    <Content Include="Views\ProductManager\Edit.cshtml" />
+    <Content Include="Views\ProductManager\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -354,6 +359,24 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BKShop.Core\BKShop.Core.csproj">
+      <Project>{e2321fa0-eed3-4005-8c64-27fe3cea2a15}</Project>
+      <Name>BKShop.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BKShop.DataAccess.InMemory\BKShop.DataAccess.InMemory.csproj">
+      <Project>{c14ee5ea-494b-484e-8377-0ad297c3abb8}</Project>
+      <Name>BKShop.DataAccess.InMemory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BKShop.DataAccess.SQL\BKShop.DataAccess.SQL.csproj">
+      <Project>{d7afd3f2-b94c-4599-9134-3edd2abef6e2}</Project>
+      <Name>BKShop.DataAccess.SQL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BKShop.Services\BKShop.Services.csproj">
+      <Project>{251a67db-e87e-4a9d-8248-af5b18eee21c}</Project>
+      <Name>BKShop.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
