@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BKShop.DataAccess.InMemory
+namespace BKShop.Core.Models
 {
-    public class Class1
+    public class ProductCategory
     {
+        public string Category { get; set; }
     }
 }
