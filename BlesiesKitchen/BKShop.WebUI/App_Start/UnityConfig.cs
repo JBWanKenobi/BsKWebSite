@@ -2,6 +2,7 @@ using BKShop.Core.Contracts;
 using BKShop.Core.Models;
 using BKShop.DataAccess.InMemory;
 using BKShop.DataAccess.SQL;
+using BKShop.Services;
 using System;
 
 using Unity;
@@ -48,7 +49,9 @@ namespace BKShop.WebUI
             // container.RegisterType<IProductRepository, ProductRepository>();
             container.RegisterType<IRepository<Product>, SQLRepository<Product>>();
             container.RegisterType<IRepository<ProductCategory>, SQLRepository<ProductCategory>>();
-
+            container.RegisterType<IRepository<Basket>, SQLRepository<Basket>>();
+            container.RegisterType<IRepository<BasketItem>, SQLRepository<BasketItem>>();
+            container.RegisterType<IBasketService, BasketService>();
         }
     }
 }
