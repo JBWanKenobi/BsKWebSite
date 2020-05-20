@@ -22,7 +22,12 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
+
+@*This removes the adminpage link to nonadmin userpage. and link only appears when user logged in is admin*@
+@if (Request.IsAuthenticated && User.IsInRole("Admin"))
+{
                     <li>@Html.ActionLink("Admin", "Index", "Admin")</li>
+}
                        </ul>
                 @Html.Partial("_LoginPartial")
                 @{

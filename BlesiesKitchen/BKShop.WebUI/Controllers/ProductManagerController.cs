@@ -11,6 +11,7 @@ using BKShop.DataAccess.InMemory;
 
 namespace BKShop.WebUI.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class ProductManagerController : Controller
     {
         IRepository<Product> context;
